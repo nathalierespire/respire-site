@@ -10,12 +10,12 @@ const offres = [
     badge: 'Découverte',
     title: 'Une bulle de clarté',
     price: 'Gratuit',
-    priceDetail: 'Séance découverte de 30 minutes',
+    priceDetail: 'Séance découverte de 15 minutes',
     color: 'border-bleu-profond/20',
     badgeBg: 'bg-bleu-clair text-bleu-profond',
     accent: 'text-bleu-profond',
     features: [
-      'Échange téléphonique ou visio de 30 min',
+      'Échange téléphonique ou visio de 15 min',
       'Identification de votre problématique principale',
       'Présentation de l\'approche',
       'Recommandations personnalisées',
@@ -26,19 +26,38 @@ const offres = [
     href: '/contact',
   },
   {
+    badge: 'À la séance',
+    title: 'Une séance, un déclic',
+    price: '125$',
+    priceDetail: 'Séance individuelle de 60 minutes',
+    color: 'border-or/20',
+    badgeBg: 'bg-creme text-or',
+    accent: 'text-or',
+    features: [
+      'Séance individuelle de 60 minutes, en visio ou en présentiel',
+      'Pour un besoin ponctuel ou un sujet précis',
+      'Sans engagement, à votre rythme',
+      'Idéal pour un premier pas ou un suivi occasionnel',
+    ],
+    cta: 'Réserver ma séance',
+    ctaClass: 'btn-primary',
+    href: '/contact',
+  },
+  {
     badge: 'Transformation',
     title: 'Un chemin de transformation',
-    price: '497$',
-    priceDetail: 'Programme complet de 8 séances',
+    price: '597$',
+    priceDetail: 'Programme de 6 séances — 1 séance tous les 15 jours',
+    priceNote: 'Tarif de lancement · 697$ par la suite',
     color: 'border-rose-brand/20',
     badgeBg: 'bg-rose-light text-rose-brand',
     accent: 'text-rose-brand',
     featured: true,
     features: [
-      '8 séances individuelles de 60 minutes',
+      '6 séances individuelles de 60 minutes, espacées de 15 jours',
       'Plan d\'accompagnement personnalisé',
-      'Outils pratiques entre les séances',
-      'Support par messagerie entre les rencontres',
+      'Suivi par WhatsApp entre les séances',
+      'Outils pratiques à mettre en application',
       'Bilan de progression à mi-parcours',
       'Séance de clôture et intégration',
     ],
@@ -85,7 +104,7 @@ export default function OffresPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-body max-w-2xl mx-auto"
           >
-            Deux formules pensées pour s&apos;adapter à vos besoins et à votre rythme.
+            Trois formules pensées pour s&apos;adapter à vos besoins et à votre rythme.
             Chaque accompagnement est unique, comme vous.
           </motion.p>
         </div>
@@ -93,8 +112,8 @@ export default function OffresPage() {
 
       {/* CARTES D'OFFRES */}
       <section className="section-padding bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {offres.map((offre, i) => (
               <ScrollReveal key={offre.title} delay={i * 0.15}>
                 <div
@@ -121,6 +140,9 @@ export default function OffresPage() {
                       {offre.price}
                     </span>
                     <p className="text-sm text-gray-500 mt-1">{offre.priceDetail}</p>
+                    {offre.priceNote && (
+                      <p className="text-xs text-or font-medium mt-1 uppercase tracking-wide">{offre.priceNote}</p>
+                    )}
                   </div>
 
                   <ul className="space-y-3 mb-10 flex-1">
@@ -172,8 +194,8 @@ export default function OffresPage() {
                   </svg>
                 </div>
                 <h4 className="font-medium text-gray-900 mb-1">Téléphone</h4>
-                <a href="tel:+15145555555" className="text-sm text-gray-500 hover:text-rose-brand transition-colors">
-                  +1 (514) 555-5555
+                <a href="tel:+14389289769" className="text-sm text-gray-500 hover:text-rose-brand transition-colors">
+                  +1 (438) 928-9769
                 </a>
               </div>
             </ScrollReveal>
@@ -186,8 +208,8 @@ export default function OffresPage() {
                   </svg>
                 </div>
                 <h4 className="font-medium text-gray-900 mb-1">Courriel</h4>
-                <a href="mailto:nathalie@respire.ca" className="text-sm text-gray-500 hover:text-rose-brand transition-colors">
-                  nathalie@respire.ca
+                <a href="mailto:contact@respire.ink" className="text-sm text-gray-500 hover:text-rose-brand transition-colors">
+                  contact@respire.ink
                 </a>
               </div>
             </ScrollReveal>

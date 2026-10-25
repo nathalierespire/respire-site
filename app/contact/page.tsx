@@ -188,8 +188,8 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <p className="font-medium text-gray-900 mb-0.5">Courriel</p>
-                          <a href="mailto:nathalie@respire.ca" className="text-gray-500 hover:text-rose-brand transition-colors text-sm">
-                            nathalie@respire.ca
+                          <a href="mailto:contact@respire.ink" className="text-gray-500 hover:text-rose-brand transition-colors text-sm">
+                            contact@respire.ink
                           </a>
                         </div>
                       </div>
@@ -202,8 +202,8 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <p className="font-medium text-gray-900 mb-0.5">Téléphone</p>
-                          <a href="tel:+15145555555" className="text-gray-500 hover:text-rose-brand transition-colors text-sm">
-                            +1 (514) 555-5555
+                          <a href="tel:+14389289769" className="text-gray-500 hover:text-rose-brand transition-colors text-sm">
+                            +1 (438) 928-9769
                           </a>
                         </div>
                       </div>
@@ -213,14 +213,20 @@ export default function ContactPage() {
                   <div className="border-t border-gray-100 pt-8">
                     <h4 className="font-medium text-gray-900 mb-4">Suivez-moi</h4>
                     <div className="flex gap-3">
-                      {['Instagram', 'Facebook', 'TikTok', 'LinkedIn'].map((social) => (
+                      {[
+                        { label: 'Instagram', href: 'https://instagram.com/respire.avectoncoeur' },
+                        { label: 'Facebook', href: 'https://facebook.com/Respire.AvectonCoeur' },
+                        { label: 'LinkedIn', href: 'https://linkedin.com/in/nathalie-chocron' },
+                      ].map((social) => (
                         <a
-                          key={social}
-                          href="#"
+                          key={social.label}
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="w-10 h-10 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-400 hover:text-rose-brand hover:border-rose-brand/20 transition-all duration-200"
-                          aria-label={social}
+                          aria-label={social.label}
                         >
-                          <span className="text-xs font-medium">{social[0]}</span>
+                          <span className="text-xs font-medium">{social.label[0]}</span>
                         </a>
                       ))}
                     </div>
@@ -230,7 +236,7 @@ export default function ContactPage() {
                     <p className="text-sm text-gray-600 leading-relaxed">
                       <strong className="text-gray-800">Séance découverte gratuite</strong>
                       <br />
-                      30 minutes pour faire connaissance, comprendre vos besoins
+                      15 minutes pour faire connaissance, comprendre vos besoins
                       et voir si nous sommes faites pour travailler ensemble.
                     </p>
                   </div>
