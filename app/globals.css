@@ -18,8 +18,8 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-block px-8 py-3 bg-black text-white rounded-full font-medium
-           transition-all duration-300 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-0.5;
+    @apply inline-block px-8 py-3 bg-white text-rose-brand border-2 border-rose-brand rounded-full font-medium
+           transition-all duration-300 hover:bg-rose-light hover:shadow-lg hover:-translate-y-0.5;
   }
   .btn-rose {
     @apply inline-block px-8 py-3 bg-rose-brand text-white rounded-full font-medium

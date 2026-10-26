@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { blurData } from "@/lib/blurData";
 
@@ -10,12 +11,14 @@ const navLinks = [
   { href: "/accompagnement", label: "Accompagnement" },
   { href: "/offres", label: "Offres" },
   { href: "/mon-histoire", label: "Mon histoire" },
+  { href: "/reflexion-du-coeur", label: "Réflexion du Cœur" },
   { href: "/contact", label: "Contact" },
   { href: "/faq", label: "FAQ" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
@@ -37,27 +40,25 @@ export default function Navbar() {
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-rose-brand transition-colors duration-200 relative group"
-              >
-                {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose-brand transition-all duration-300 group-hover:w-full" />
-              </Link>
-            ))}
-            <Link href="/reflexion-du-coeur" aria-label="Réflexion du cœur">
-              <Image
-                src="/images/icone.png"
-                alt="Cœur"
-                width={32}
-                height={32}
-                className="hover:scale-110 transition-transform"
-                placeholder="blur"
-                blurDataURL={blurData.icone}
-              />
-            </Link>
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors duration-200 relative group ${
+                    isActive ? "text-rose-brand" : "text-gray-600 hover:text-rose-brand"
+                  }`}
+                >
+                  {link.label}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-rose-brand transition-all duration-300 ${
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
+                </Link>
+              );
+            })}
           </div>
 
           {/* Mobile hamburger */}
@@ -94,23 +95,21 @@ export default function Navbar() {
             className="md:hidden bg-white border-t border-gray-100 overflow-hidden"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg font-medium text-gray-700 hover:text-rose-brand transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Link
-                href="/reflexion-du-coeur"
-                onClick={() => setIsOpen(false)}
-                className="text-lg font-medium text-rose-brand"
-              >
-                Réflexion du cœur
-              </Link>
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`text-lg font-medium transition-colors ${
+                      isActive ? "text-rose-brand" : "text-gray-700 hover:text-rose-brand"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
             </div>
           </motion.div>
         )}
