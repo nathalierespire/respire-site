@@ -255,7 +255,7 @@ export default function HomePage() {
               Réservez votre appel gratuit
             </Link>
             <p className="text-sm text-gray-500 mt-3">
-              30 minutes, sans engagement — je vous rappelle personnellement.
+              15 minutes, sans engagement — je vous rappelle personnellement.
             </p>
           </ScrollReveal>
         </div>

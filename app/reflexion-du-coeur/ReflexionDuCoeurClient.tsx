@@ -160,20 +160,6 @@ export default function ReflexionDuCoeurPage() {
                 {isSpinning ? 'Le cœur parle...' : 'Lancer le défilement'}
               </motion.button>
             </motion.div>
-
-            {/* Illustration placeholder */}
-            <ScrollReveal delay={0.3} className="mt-20">
-              <div className="max-w-xs mx-auto">
-                <div className="w-full aspect-square rounded-full bg-gradient-to-br from-bleu-clair via-rose-light/30 to-creme flex items-center justify-center">
-                  <div className="text-center text-gray-400">
-                    <svg className="w-20 h-20 mx-auto mb-3 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.8} d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0" />
-                    </svg>
-                    <p className="text-xs tracking-wide uppercase">Illustration yoga</p>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
           </div>
         </div>
       </section>

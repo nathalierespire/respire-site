@@ -222,12 +222,14 @@ export default function OffresPage() {
                   </svg>
                 </div>
                 <h4 className="font-medium text-gray-900 mb-1">Réseaux</h4>
-                <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
+                <div className="flex items-center justify-center flex-wrap gap-x-2 gap-y-1 text-sm text-gray-500">
                   <a href="https://www.instagram.com/respire.avectoncoeur/" target="_blank" rel="noopener noreferrer" className="hover:text-rose-brand transition-colors">Instagram</a>
                   <span>·</span>
                   <a href="https://www.facebook.com/Respire.AvectonCoeur" target="_blank" rel="noopener noreferrer" className="hover:text-rose-brand transition-colors">Facebook</a>
                   <span>·</span>
                   <a href="https://www.linkedin.com/in/nathalie-chocron/" target="_blank" rel="noopener noreferrer" className="hover:text-rose-brand transition-colors">LinkedIn</a>
+                  <span>·</span>
+                  <a href="https://www.tiktok.com/@respire.avectoncoeur" target="_blank" rel="noopener noreferrer" className="hover:text-rose-brand transition-colors">TikTok</a>
                 </div>
               </div>
             </ScrollReveal>
