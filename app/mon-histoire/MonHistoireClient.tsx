@@ -143,7 +143,7 @@ export default function MonHistoirePage() {
               Chaque parcours est unique. Rencontrons-nous pour écrire
               ensemble le prochain chapitre du vôtre.
             </p>
-            <Link href="/contact" className="btn-rose">
+            <Link href="https://cal.com/respire/bulle-de-clarte" target="_blank" rel="noopener noreferrer"className="btn-rose">
               Prendre rendez-vous
             </Link>
           </div>
