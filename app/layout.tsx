@@ -5,8 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Coach en transitions de vie · Femmes 40+ · Montréal | Respire',
-  description:
-    'Vous vous sentez dépassé·e ou bloqué·e ? Nathalie vous accompagne en coaching individuel et entreprise à Montréal — clarté, énergie, confiance.',
+  description: "Compétente, épuisée, perdue en chemin ? Nathalie accompagne les femmes de 40 ans et plus en transition de vie à Montréal. Séance découverte gratuite.",
 }
 
 export default function RootLayout({
