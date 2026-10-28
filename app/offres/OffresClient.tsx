@@ -23,7 +23,7 @@ const offres = [
     ],
     cta: 'Réserver ma bulle',
     ctaClass: 'btn-primary',
-    href: '/contact',
+    href: 'https://cal.com/respire/bulle-de-clarte',
   },
   {
     badge: 'À la séance',
