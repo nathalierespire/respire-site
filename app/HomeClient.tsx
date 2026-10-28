@@ -369,7 +369,7 @@ export default function HomePage() {
               <Link href="/offres" className="btn-rose">
                 Découvrir les offres
               </Link>
-              <Link href="/contact" className="btn-primary">
+              <Link href="https://cal.com/respire/bulle-de-clarte" target="_blank" rel="noopener noreferrer" className="btn-primary">
                 Prendre rendez-vous
               </Link>
             </div>
