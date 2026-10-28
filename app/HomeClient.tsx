@@ -251,7 +251,7 @@ export default function HomePage() {
           </div>
 
           <ScrollReveal delay={0.3} className="text-center mt-16">
-            <Link href="/contact" className="btn-rose">
+            <Link href="https://cal.com/respire/bulle-de-clarte" target="_blank" rel="noopener noreferrer" className="btn-rose">
               Réservez votre appel gratuit
             </Link>
             <p className="text-sm text-gray-500 mt-3">
